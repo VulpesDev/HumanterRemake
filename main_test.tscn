@@ -1,0 +1,155 @@
+[gd_scene load_steps=23 format=3 uid="uid://33xm4cyl0k1m"]
+
+[ext_resource type="Script" path="res://MainTest.cs" id="1_dr3su"]
+[ext_resource type="Texture2D" uid="uid://ctyfbvbgkc5et" path="res://Assets/Materials/Soldier/Run/Soldier_Run.png" id="4_0ogqv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpi1h"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4ley"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tmbs"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t17e"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k34yg"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0hfr"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n78xm"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8shli"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50l34"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bljr5"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77q40"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4bno"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50q2j"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l3ey"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_naguw"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(256, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2add"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp44v"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq256"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xidns"]
+atlas = ExtResource("4_0ogqv")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhfp8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpi1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4ley")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tmbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t17e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k34yg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0hfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n78xm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8shli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50l34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bljr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77q40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4bno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50q2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8l3ey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_naguw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2add")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp44v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq256")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xidns")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 25.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dr3su")
+walkingSpeed = 500.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mhfp8")
+animation = &"Run"
+autoplay = "Run"
+frame_progress = 0.0447917
